@@ -16,7 +16,7 @@ class Database:
         self.cur = self.con.cursor()
 
     def list_users(self):
-        self.cur.execute("SELECT first_name, last_name, gender FROM users LIMIT 50")
+        self.cur.execute("SELECT connection,duration, freqconnection")
         result = self.cur.fetchall()
 
         return result
